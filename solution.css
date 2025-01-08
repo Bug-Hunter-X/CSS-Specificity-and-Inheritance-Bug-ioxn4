@@ -1,0 +1,17 @@
+The solution is to increase the specificity of the `div p` selector to ensure it overrides the `p` selector. Here's how:
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div > p {
+  color: green; /* Increased specificity using the child combinator */
+}
+```
+
+By using the child combinator (`>`), the selector now specifically targets only paragraph elements that are direct children of div elements. This ensures that the intended styling is applied, resolving the inheritance conflict.
