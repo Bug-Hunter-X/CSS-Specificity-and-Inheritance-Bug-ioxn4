@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates an issue with specificity and inheritance:
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div p {
+  color: green; /* This rule is less specific than the p rule */
+}
+```
+
+In this example, the `div p` selector has lower specificity than the `p` selector. As a result, the text color of paragraphs within a div will be red, not green, due to inheritance.  This can lead to unexpected styling if you aren't carefully considering specificity.
